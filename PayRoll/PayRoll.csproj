@@ -212,7 +212,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pages\Default\About.aspx" />
-    <Content Include="Pages\AttendanceModule\attendance.aspx" />
     <Content Include="Pages\Default\Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -240,9 +239,6 @@
     <Content Include="Pages\EmployeeMaster\EmployeeMasterDelete.aspx" />
     <Content Include="Pages\EmployeeMaster\EmployeeMasterIndex.aspx" />
     <Content Include="Pages\EmployeeMaster\EmployeeMasterUpdate.aspx" />
-    <Content Include="Pages\Salary\Salgen.aspx" />
-    <Content Include="Pages\Salary\Salhead.aspx" />
-    <Content Include="Pages\Salary\Salinfo.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -282,9 +278,10 @@
     <Compile Include="App_Data\repository\attendence_calc.cs" />
     <Compile Include="App_Data\repository\FL_Repo.cs" />
     <Compile Include="App_Data\repository\general_repo.cs" />
-    <Compile Include="App_Data\repository\payroll_repo.cs" />
+    <Compile Include="App_Data\repository\Payroll_repo.cs" />
     <Compile Include="App_Data\repository\salhead_repo.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Pages\Default\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -293,13 +290,6 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Pages\AttendanceModule\attendance.aspx.cs">
-      <DependentUpon>attendance.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\AttendanceModule\attendance.aspx.designer.cs">
-      <DependentUpon>attendance.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\Default\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -317,6 +307,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Pages\DepartmentMaster\DepartmentRepo.cs" />
     <Compile Include="Pages\EmployeeMaster\EmployeeMasterCreate.aspx.cs">
       <DependentUpon>EmployeeMasterCreate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -347,27 +338,6 @@
       <DependentUpon>EmployeeMasterUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Pages\Salary\Salgen.aspx.cs">
-      <DependentUpon>Salgen.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Salary\Salgen.aspx.designer.cs">
-      <DependentUpon>Salgen.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Salary\Salhead.aspx.cs">
-      <DependentUpon>Salhead.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Salary\Salhead.aspx.designer.cs">
-      <DependentUpon>Salhead.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Salary\Salinfo.aspx.cs">
-      <DependentUpon>Salinfo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Salary\Salinfo.aspx.designer.cs">
-      <DependentUpon>Salinfo.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -392,6 +362,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />
+    <Folder Include="Pages\DesignationMaster\" />
+    <Folder Include="Pages\GradeMaster\" />
+    <Folder Include="Pages\ShiftMaster\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -4,7 +4,7 @@ using MySql.Data.MySqlClient;
 
 namespace PayRoll.App_Data.repository
 {
-    public class FL_Repo
+    public static class FL_Repo
     {
         private static readonly string Constring = ConfigurationManager.ConnectionStrings["payrollConnectionString"].ConnectionString;
 

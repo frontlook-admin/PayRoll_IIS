@@ -1,8 +1,8 @@
 ﻿namespace PayRoll.App_Data.repository
 {
-    public static class payroll_repo
+    public static class Payroll_repo
     {
-        public readonly static string database_name = "payroll_db";
+        public static readonly string database_name = "payrolldb";
         /*public static int Head_Count_DB(this MySqlCommand cmd, MySqlConnection con,
             string Table_Name, string Schema_Name, string Anti_Parameter = null)
         {

@@ -59,7 +59,7 @@ namespace PayRoll.App_Data.repository
             return controlids;
         }
 
-        public static void get_SalHead_ControlIds(this MySqlCommand cmd, MySqlConnection con, string[] controlids = null, string[] ids = null)
+        public static void Get_SalHead_ControlIds(this MySqlCommand cmd, MySqlConnection con, string[] controlids = null, string[] ids = null)
         {
             controlids = cmd.get_ControlIds_Salhead(con);
             ids = cmd.Get_Ids_Salhead(con);
